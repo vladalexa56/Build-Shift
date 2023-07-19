@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styleReg.css" />
+    <script src="scriptReg.js" defer></script>
+  </head>
+  <body>
+    <div class="register-form">
+      <h1>Welcome to Shift Builder</h1>
+      <form action="" class="form">
+        Email <br />
+        <input
+          type="email"
+          name=""
+          id="email"
+          placeholder="Enter your email address..."
+        />
+        <span id="emailWrong" class="text-danger font-weight-regular"></span>
+        <br />
+
+        Username <br />
+        <input
+          type="text"
+          name=""
+          id="username"
+          placeholder="Enter a username..."
+        />
+        <span id="userWrong" class="text-danger font-weight-regular"></span>
+        <br />
+        Password <br />
+        <input
+          type="password"
+          id="password"
+          placeholder="Enter your password..."
+        />
+        <span id="passWrong" class="text-danger font-weight-regular"></span>
+        <br />
+        First Name <br />
+        <input
+          type="text"
+          id="firstName"
+          placeholder="Enter your first name..."
+        />
+        <span id="firstNWrong" class="text-danger font-weight-regular"></span>
+        <br />
+        Last Name <br />
+        <input
+          type="text"
+          id="lastName"
+          placeholder="Enter your last name..."
+        />
+        <span id="lastNWrong" class="text-danger font-weight-regular"></span>
+        <br />
+        Age <br />
+        <input type="number" id="age" placeholder="Enter your age..." /> <br />
+        <span id="ageWrong" class="text-danger font-weight-regular"></span>
+        <input type="submit" value="Sign Up" id="signUp" />
+        <p>
+          Already have an account? <a href="../Login/Login.html">Sign in.</a>
+        </p>
+      </form>
+    </div>
+  </body>
+</html>

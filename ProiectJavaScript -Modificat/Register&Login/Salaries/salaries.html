@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!--Google Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <!--Bootstrap-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <!--CSS-->
+    <link rel="stylesheet" href="/styleShift.css" />
+    <script type="module" src="salaries.js" defer></script>
+  </head>
+  <body>
+    <div class="content">
+      <!--Nav Bar-->
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"
+            ><img
+              src="../images/shift-high-resolution-logo-color-on-transparent-background.png"
+              alt=""
+              width="100px"
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="../Home/Home.html"
+                  id="home"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="../AddShift/AddShift.html"
+                  id="addShift"
+                  >Add Shift</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../EditProfile/Edit.html"
+                  >Edit Profile</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../EditProfile/Edit.html"
+                  >See your salaries here</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" id="welcomeUser">
+                  Hello, username</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link log-out" href="#">Log Out</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="shift none">
+        <div class="close-btn">X</div>
+        <form action="" class="formaddShift">
+          <input type="time" id="startTime" /> <br />
+          <input type="time" id="endTime" /> <br />
+          <input type="text" id="hourlyWage" placeholder="Hourly wage" /><br />
+          Workplace: <br />
+          <select name="workplace" id="workplace">
+            <option value="">--Please choose an option--</option>
+            <option value="Home">Home</option>
+            <option value="Birou">Birou</option>
+          </select>
+          <br />Shift Slug: <br />
+          <input type="text" id="shiftSlug" /> <br />
+          Comments: <br />
+          <textarea name="" cols="30" rows="10" id="comments"></textarea>
+          <br />
+          <input type="submit" value="Save" id="save" />
+        </form>
+      </div>
+
+      <div class="sort">
+        <select name="" id="sortBy">
+          <option value="">Sort by...</option>
+          <option value="date-ascending">Sort by date ascending</option>
+          <option value="date-descending">Sort by date descending</option>
+        </select>
+      </div>
+
+      <div class="tableB">
+        <!--Shifts table-->
+        <table class="table mt-5 table-hover">
+          <thead>
+            <tr>
+              <th scope="col">Date</th>
+
+              <th scope="col">Beggining Time</th>
+
+              <th scope="col">End Time</th>
+
+              <th scope="col">Price per hour</th>
+
+              <th scope="col">Shift Place</th>
+
+              <th scope="col">Shift Slug</th>
+              <th scope="col">Total Profit per Shift</th>
+              <th scope="col">Action</th>
+            </tr>
+          </thead>
+
+          <tbody id="tbody"></tbody>
+        </table>
+      </div>
+
+      <h3 style="text-align: center; font-weight: 700">Best paid month</h3>
+
+      <canvas
+        class="chart"
+        id="myChart"
+        style="width: 100%; max-width: 1200px"
+      ></canvas>
+    </div>
+
+    <div class="logOut none">
+      <p>Are you sure you want to log out?</p>
+      <div class="btn-group" role="group" aria-label="Basic outlined example">
+        <button type="button" class="btn btn-outline-primary">Yes</button>
+
+        <button type="button" class="btn btn-outline-primary">No</button>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="/logOut.js"></script>
+  </body>
+</html>
