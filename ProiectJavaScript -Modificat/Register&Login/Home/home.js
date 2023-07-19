@@ -92,9 +92,7 @@ tbody.addEventListener("click", function (e) {
   if (e.target.classList.contains("remove")) {
     let shiftEdit = e.target.closest("tr").children[5].innerHTML;
     index = shifts.findIndex((obj, index) => obj.shiftSlug === shiftEdit);
-    let shift = shifts.find((obj, index) => {
-      return obj.shiftSlug === shiftEdit;
-    });
+
     shifts.splice(index, 1);
     localStorage.setItem(user.userName, JSON.stringify(shifts));
     tbody.innerHTML = "";

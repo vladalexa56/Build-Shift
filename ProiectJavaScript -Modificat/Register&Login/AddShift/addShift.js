@@ -68,8 +68,7 @@ const months = [
 const renderCalendar = () => {
   let firstDayofMonth = new Date(currYear, currMonth, 1).getDay(),
     lastDateofMonth = new Date(currYear, currMonth + 1, 0).getDate(),
-    lastDayofMonth = new Date(currYear, currMonth, lastDateofMonth).getDay(),
-    lastDateofLastMonth = new Date(currYear, currMonth, 0).getDate();
+    lastDayofMonth = new Date(currYear, currMonth, lastDateofMonth).getDay();
   let liTag = "";
 
   for (let i = firstDayofMonth; i > 0; i--) {

@@ -1,4 +1,4 @@
-"use script";
+"use strict";
 const registerForm = document.querySelector(".register-form");
 const username = document.querySelector("#username");
 const pass = document.querySelector("#password");
